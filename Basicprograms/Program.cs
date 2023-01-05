@@ -1,21 +1,23 @@
 ﻿namespace Basicprogram
 {
-    public class PowerOf2
+    public class QuoitentAndRemainder
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter the power value: ");
-            long N = Convert.ToInt32(Console.ReadLine());
-            int num = 2;
-            for (var i = 0; i < N; i++)
-            {
-                Console.WriteLine(num);
-                num = num * 2;
-            }
-            Console.ReadLine();
-           
+            Console.WriteLine("Enter a Dividend: ");
+            int dividend = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter a Divisor: ");
+            int divisor = Convert.ToInt32(Console.ReadLine());
 
-            }
+            int quotient = dividend / divisor;
+            int remainder = dividend % divisor;
+
+            Console.WriteLine("Quotient = " + quotient);
+            Console.WriteLine("Remainder = " + remainder);
+            Console.ReadLine();
+
+
+        }
 
 
         }
