@@ -1,22 +1,33 @@
 ﻿namespace Basicprogram
 {
-    public class Swap2Num
+    public class VowelsOrConsonants
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter value of a: ");
-            int a = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter value of b: ");
-            int b = Convert.ToInt32(Console.ReadLine());
-            int temp;
+            Console.WriteLine("Enter any Alphabet: ");
+            char alphabet = Convert.ToChar(Console.ReadLine().ToLower());
 
-            Console.WriteLine("Before Swapping: Value of a={0}, b={1}", a, b);
-
-            temp = a;
-            a = b;
-            b = temp;
-
-            Console.WriteLine("After Swapping: Value of a={0}, b={1}", a, b);
+            switch (alphabet)
+            {
+                case 'a':
+                    Console.WriteLine("Alphabet is Vowel");
+                    break;
+                case 'e':
+                    Console.WriteLine("Alphabet is Vowel");
+                    break;
+                case 'i':
+                    Console.WriteLine("Alphabet is Vowel");
+                    break;
+                case 'o':
+                    Console.WriteLine("Alphabet is Vowel");
+                    break;
+                case 'u':
+                    Console.WriteLine("Alphabet is Vowel");
+                    break;
+                default:
+                    Console.WriteLine("Alphabet is Consonant");
+                    break;
+            }
             Console.ReadLine();
 
 
