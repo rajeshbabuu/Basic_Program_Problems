@@ -1,30 +1,24 @@
 ﻿namespace Basicprogram
 {
-    public class LargestNum
+    public class Leapyear
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter a value for x: ");
-            int x = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter a value for y: ");
-            int y = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter a value for z: ");
-            int z = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the year in 4 digits: ");
+            int Year = Convert.ToInt32(Console.ReadLine());
 
-            if (x > y && x > z)
-            {
-                Console.WriteLine("x is greater");
-            }
-            else if (y > x && y > z)
-            {
-                Console.WriteLine("y is greater");
+           if (((Year % 4 == 0) && (Year % 100 != 0)) || (Year % 400 == 0))
+           
+                {
+                Console.WriteLine("{0} is a Leap Year", Year);
+                
             }
             else
             {
-                Console.WriteLine("z is greater");
+                Console.WriteLine("{0} is not a Leap Year", Year); ;
             }
             Console.ReadLine();
-
+            
 
             }
 
