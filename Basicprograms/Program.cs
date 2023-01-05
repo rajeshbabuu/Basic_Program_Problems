@@ -1,19 +1,22 @@
 ﻿namespace Basicprogram
 {
-    public class QuoitentAndRemainder
+    public class Swap2Num
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter a Dividend: ");
-            int dividend = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter a Divisor: ");
-            int divisor = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter value of a: ");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter value of b: ");
+            int b = Convert.ToInt32(Console.ReadLine());
+            int temp;
 
-            int quotient = dividend / divisor;
-            int remainder = dividend % divisor;
+            Console.WriteLine("Before Swapping: Value of a={0}, b={1}", a, b);
 
-            Console.WriteLine("Quotient = " + quotient);
-            Console.WriteLine("Remainder = " + remainder);
+            temp = a;
+            a = b;
+            b = temp;
+
+            Console.WriteLine("After Swapping: Value of a={0}, b={1}", a, b);
             Console.ReadLine();
 
 
