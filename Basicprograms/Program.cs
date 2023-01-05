@@ -1,26 +1,37 @@
 ﻿namespace Basicprogram
 {
-    public class HarmonicNumber
+    public class LargestNum
     {
         static void Main(string[] args)
         {
-            float count;
-            float sum = 0;
+            Console.WriteLine("Enter a value for x: ");
+            int x = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter a value for y: ");
+            int y = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter a value for z: ");
+            int z = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Enter the value of N: ");
-
-            int N = Convert.ToInt32(Console.ReadLine());
-            for (count = 1; count <=N; count++)
+            if (x > y && x > z)
             {
-                Console.WriteLine("1/{0} + ", count);
-                sum += 1 / count;
+                Console.WriteLine("x is greater");
             }
-            Console.WriteLine("Sum of series of {0} terms: {1}", N, sum);
+            else if (y > x && y > z)
+            {
+                Console.WriteLine("y is greater");
+            }
+            else
+            {
+                Console.WriteLine("z is greater");
+            }
             Console.ReadLine();
-            
+
+
             }
+
+
+        }
            
 
             }
-        }
+        
     
