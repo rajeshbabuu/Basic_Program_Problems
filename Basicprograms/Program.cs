@@ -1,22 +1,26 @@
 ﻿namespace Basicprogram
 {
-    public class EvenOrOdd
+    public class Factors
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter a Number: ");
-            int num = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter a Value: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            int i = 0;
 
-            if (num % 2 == 0)
+            for (i = 1; i <= N; i++)
             {
-                Console.WriteLine("Number is Even");
+                if (N % i == 0)
+                {
+                    Console.WriteLine(i + " is a Factor of " + N);
+                }
+                else
+                {
+                    Console.WriteLine(i + " is not a Factor of " + N);
+                }
+                Console.ReadLine();
+
             }
-            else
-            {
-                Console.WriteLine("Number is Odd");
-            }
-            Console.ReadLine();
-                
         }
     }
 }
