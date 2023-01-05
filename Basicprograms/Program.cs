@@ -1,26 +1,38 @@
 ﻿namespace Basicprogram
 {
-    public class Factors
+    public class FlipCoin
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter a Value: ");
-            int N = Convert.ToInt32(Console.ReadLine());
-            int i = 0;
+            double tails = 0;
+            double heads = 0;
+            int loopCount = 1;
 
-            for (i = 1; i <= N; i++)
+            while (loopCount <= 10000)
             {
-                if (N % i == 0)
+                Random random = new Random();
+                double coinFlip = random.Next(0, 2);
+
+                if (coinFlip < 0.5)
                 {
-                    Console.WriteLine(i + " is a Factor of " + N);
+                    tails++;
                 }
                 else
                 {
-                    Console.WriteLine(i + " is not a Factor of " + N);
+                    heads++;
                 }
-                Console.ReadLine();
+                loopCount = loopCount + 1;
+            }
+            double percentTails = (tails / loopCount) * 100;
+            double percentHeads = (heads / loopCount) * 100;
+
+                Console.WriteLine( "The Percentage of heads is : " + percentHeads + " % " );
+            Console.WriteLine("The percentage of tails is: " + percentTails + " % ");
+            Console.ReadLine();
+
+            }
+           
 
             }
         }
-    }
-}
+    
